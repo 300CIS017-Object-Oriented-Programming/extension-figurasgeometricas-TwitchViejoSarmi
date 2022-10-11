@@ -11,12 +11,13 @@ View::View(){
 
 void View::agregarFigura() {
     int opcion;
-    float longitudLado, base, altura, radio, lado, diagonalMenor, diagonalMayor;
+    float longitudLado, base, altura, radio, lado, diagonalMenor, diagonalMayor, baseMayor, baseMenor, diagonal;
     cout << "======== Figuras disponibles ========\n";
     cout << "1. Cuadrado\n";
     cout << "2. Circulo\n";
     cout << "3. Rectangulo\n";
     cout << "4. Rombo\n";
+    cout << "5. Trapecio Rectangulo\n";
     cout << "Indique que figura desea agregar:\n";
     cin >> opcion;
     switch (opcion){
@@ -47,6 +48,17 @@ void View::agregarFigura() {
             cout << "Ingrese la diagonal menor del rombo:\n";
             cin >> diagonalMenor;
             programaObj->agregarFigura(lado, diagonalMayor,diagonalMenor);// Importante el casteo para que se llame al metodo correcto
+        }
+        case 5: {
+            cout << "Ingresa la base mayor:\n";
+            cin >> baseMayor;
+            cout << "Ingresa la base menor:\n";
+            cin >> baseMenor;
+            cout << "Ingresa la diagona:\n";
+            cin >> diagonal;
+            cout << "Ingresa la altura:\n";
+            cin >> altura;
+            programaObj->agregarFigura(baseMayor, baseMenor, diagonal, altura);// Importante el casteo para que se llame al metodo correcto
         }
     }
 }
