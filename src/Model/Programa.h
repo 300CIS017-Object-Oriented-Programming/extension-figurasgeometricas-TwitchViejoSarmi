@@ -9,6 +9,7 @@
 #include "../Model/Cuadrado.h"
 #include "../Model/Rectangulo.h"
 #include "../Model/Rombo.h"
+#include "../Model/Trapecio.h"
 #include "../Model/FiguraGeometrica.h"
 
 class Programa {
@@ -23,6 +24,7 @@ public:
     void agregarFigura(float radio);
     void agregarFigura(int base, int altura);
     void agregarFigura(int lado, int diagonalMayor,int diagonalMenor);
+    void agregarFigura(float baseMayor, float baseMenor, float diagonal, float altura);
     void dibujarFiguras();
     void dibujarFiguras(int color); //sobrecarga del metodo para dibujar con colores
     void mostrarAreaFigura();

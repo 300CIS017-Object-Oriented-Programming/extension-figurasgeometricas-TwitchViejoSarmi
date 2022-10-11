@@ -31,6 +31,11 @@ void Programa::agregarFigura(int lado, int diagonalMayor,int diagonalMenor){
     vectorFiguras.push_back(new Rombo(lado, diagonalMayor, diagonalMenor));
 }
 
+//Metodo para el trapecio rectangulo.
+void Programa::agregarFigura(float baseMayor, float baseMenor, float altura, float diagonal) {
+    vectorFiguras.push_back(new Trapecio(baseMayor, baseMenor, diagonal, altura));
+}
+
 void Programa::mostrarAreaFigura() {
     float area;
     for(auto & figura : vectorFiguras){
